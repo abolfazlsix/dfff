@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="menu-page">
+    <header class="menu-header">
+      <div class="header-left">
+        <a href="cart.html" class="cart-link" title="View Cart">
+          <svg
+            class="cart-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M7 4h-2l-3 7v2h3l.89 2H18v-2H8.42l-.89-2h10.72l3-7H7zm0 2h11.42l-1.5 3.5H7.83L7 6zm1 13a2 2 0 110-4 2 2 0 010 4zm8 0a2 2 0 110-4 2 2 0 010 4z"
+            />
+          </svg>
+          <span id="cart-count" class="cart-count">0</span>
+        </a>
+      </div>
+      <h1 class="collection-title">Our Delicious Menu</h1>
+      <div class="header-right">
+        <img
+          src="https://dummyimage.com/80x40/007bff/ffffff&text=LOGO"
+          alt="Logo"
+          class="logo"
+        />
+      </div>
+    </header>
+
+    <nav class="category-nav">
+      <a href="#breakfast" class="category-link">Breakfast</a>
+      <a href="#appetizer" class="category-link">Appetizer</a>
+      <a href="#barbecue" class="category-link">Barbecue</a>
+      <a href="#tea" class="category-link">Tea</a>
+    </nav>
+
+    <main>
+      <!-- Breakfast Section -->
+      <section id="breakfast" class="menu-section">
+        <h2 class="section-title">Breakfast</h2>
+        <div class="product-grid">
+          <article class="product-card" data-id="1">
+            <div class="card-header">
+              <h3 class="product-name">Pancake Stack</h3>
+              <span class="product-price">$8.50</span>
+            </div>
+            <p class="product-desc">Fluffy pancakes served with maple syrup.</p>
+            <img
+              src="https://dummyimage.com/400x250/cccccc/ffffff&text=Pancakes"
+              alt="Pancake Stack"
+              class="product-img"
+            />
+            <button class="btn-add">Add</button>
+          </article>
+          <article class="product-card" data-id="2">
+            <div class="card-header">
+              <h3 class="product-name">Avocado Toast</h3>
+              <span class="product-price">$7.00</span>
+            </div>
+            <p class="product-desc">Toasted sourdough topped with smashed avocado.</p>
+            <img
+              src="https://dummyimage.com/400x250/cccccc/ffffff&text=Avocado+Toast"
+              alt="Avocado Toast"
+              class="product-img"
+            />
+            <button class="btn-add">Add</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Appetizer Section -->
+      <section id="appetizer" class="menu-section">
+        <h2 class="section-title">Appetizer</h2>
+        <div class="product-grid">
+          <article class="product-card" data-id="3">
+            <div class="card-header">
+              <h3 class="product-name">Bruschetta</h3>
+              <span class="product-price">$5.50</span>
+            </div>
+            <p class="product-desc">Grilled bread with tomato, basil, and olive oil.</p>
+            <img
+              src="https://dummyimage.com/400x250/cccccc/ffffff&text=Bruschetta"
+              alt="Bruschetta"
+              class="product-img"
+            />
+            <button class="btn-add">Add</button>
+          </article>
+          <article class="product-card" data-id="4">
+            <div class="card-header">
+              <h3 class="product-name">Stuffed Mushrooms</h3>
+              <span class="product-price">$6.00</span>
+            </div>
+            <p class="product-desc">Mushrooms stuffed with cheese and herbs.</p>
+            <img
+              src="https://dummyimage.com/400x250/cccccc/ffffff&text=Stuffed+Mushrooms"
+              alt="Stuffed Mushrooms"
+              class="product-img"
+            />
+            <button class="btn-add">Add</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Barbecue Section -->
+      <section id="barbecue" class="menu-section">
+        <h2 class="section-title">Barbecue</h2>
+        <div class="product-grid">
+          <article class="product-card" data-id="5">
+            <div class="card-header">
+              <h3 class="product-name">Grilled Ribs</h3>
+              <span class="product-price">$12.00</span>
+            </div>
+            <p class="product-desc">Slow cooked ribs with house BBQ sauce.</p>
+            <img
+              src="https://dummyimage.com/400x250/cccccc/ffffff&text=Grilled+Ribs"
+              alt="Grilled Ribs"
+              class="product-img"
+            />
+            <button class="btn-add">Add</button>
+          </article>
+          <article class="product-card" data-id="6">
+            <div class="card-header">
+              <h3 class="product-name">BBQ Chicken</h3>
+              <span class="product-price">$10.00</span>
+            </div>
+            <p class="product-desc">Juicy chicken grilled to perfection.</p>
+            <img
+              src="https://dummyimage.com/400x250/cccccc/ffffff&text=BBQ+Chicken"
+              alt="BBQ Chicken"
+              class="product-img"
+            />
+            <button class="btn-add">Add</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Tea Section -->
+      <section id="tea" class="menu-section">
+        <h2 class="section-title">Tea</h2>
+        <div class="product-grid">
+          <article class="product-card" data-id="7">
+            <div class="card-header">
+              <h3 class="product-name">Green Tea</h3>
+              <span class="product-price">$3.00</span>
+            </div>
+            <p class="product-desc">Refreshing green tea with antioxidants.</p>
+            <img
+              src="https://dummyimage.com/400x250/cccccc/ffffff&text=Green+Tea"
+              alt="Green Tea"
+              class="product-img"
+            />
+            <button class="btn-add">Add</button>
+          </article>
+          <article class="product-card" data-id="8">
+            <div class="card-header">
+              <h3 class="product-name">Chai Latte</h3>
+              <span class="product-price">$4.00</span>
+            </div>
+            <p class="product-desc">Spiced tea latte with milk.</p>
+            <img
+              src="https://dummyimage.com/400x250/cccccc/ffffff&text=Chai+Latte"
+              alt="Chai Latte"
+              class="product-img"
+            />
+            <button class="btn-add">Add</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

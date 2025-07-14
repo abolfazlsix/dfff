@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="cart-page">
+    <header class="menu-header">
+      <div class="header-left">
+        <a href="index.html" class="cart-link" title="Back to Menu">
+          &larr; Back
+        </a>
+      </div>
+      <h1 class="collection-title">Your Cart</h1>
+      <div class="header-right"></div>
+    </header>
+
+    <main class="menu-section" style="max-width: 600px">
+      <div id="cart-items"></div>
+      <hr style="margin: 1.5rem 0" />
+      <div style="display: flex; justify-content: space-between; font-weight: 600">
+        <span>Total</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
