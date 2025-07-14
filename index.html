@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="cart-section">
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+            <div class="collection-name">
+                <h1>Delicious Delights</h1>
+            </div>
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Categories -->
+    <nav class="categories-nav">
+        <div class="categories">
+            <button class="category-btn active" data-category="breakfast">Breakfast</button>
+            <button class="category-btn" data-category="appetizer">Appetizer</button>
+            <button class="category-btn" data-category="barbecue">Barbecue</button>
+            <button class="category-btn" data-category="tea">Tea</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Breakfast Section -->
+        <section id="breakfast" class="category-section">
+            <div class="category-header">
+                <h2>Breakfast</h2>
+                <div class="category-description">Start your day with our delicious breakfast options</div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-product-id="1">
+                    <div class="product-info">
+                        <h3 class="product-name">Classic Pancakes</h3>
+                        <p class="product-description">Fluffy pancakes served with maple syrup and butter</p>
+                        <span class="product-price">$8.99</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🥞</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(1, 'Classic Pancakes', 8.99)">Add to Cart</button>
+                </div>
+                
+                <div class="product-card" data-product-id="2">
+                    <div class="product-info">
+                        <h3 class="product-name">Avocado Toast</h3>
+                        <p class="product-description">Fresh avocado on artisan bread with herbs</p>
+                        <span class="product-price">$7.50</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🥑</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(2, 'Avocado Toast', 7.50)">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="3">
+                    <div class="product-info">
+                        <h3 class="product-name">Breakfast Burrito</h3>
+                        <p class="product-description">Eggs, cheese, bacon wrapped in warm tortilla</p>
+                        <span class="product-price">$9.25</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🌯</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(3, 'Breakfast Burrito', 9.25)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appetizer Section -->
+        <section id="appetizer" class="category-section">
+            <div class="category-header">
+                <h2>Appetizer</h2>
+                <div class="category-description">Perfect starters to begin your meal</div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-product-id="4">
+                    <div class="product-info">
+                        <h3 class="product-name">Mozzarella Sticks</h3>
+                        <p class="product-description">Crispy breaded mozzarella with marinara sauce</p>
+                        <span class="product-price">$6.99</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🧀</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(4, 'Mozzarella Sticks', 6.99)">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="5">
+                    <div class="product-info">
+                        <h3 class="product-name">Buffalo Wings</h3>
+                        <p class="product-description">Spicy chicken wings with blue cheese dip</p>
+                        <span class="product-price">$8.75</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🍗</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(5, 'Buffalo Wings', 8.75)">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="6">
+                    <div class="product-info">
+                        <h3 class="product-name">Nachos Supreme</h3>
+                        <p class="product-description">Loaded nachos with cheese, jalapeños, and sour cream</p>
+                        <span class="product-price">$7.25</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🧄</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(6, 'Nachos Supreme', 7.25)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Barbecue Section -->
+        <section id="barbecue" class="category-section">
+            <div class="category-header">
+                <h2>Barbecue</h2>
+                <div class="category-description">Smoky and savory grilled specialties</div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-product-id="7">
+                    <div class="product-info">
+                        <h3 class="product-name">BBQ Ribs</h3>
+                        <p class="product-description">Tender pork ribs with our signature BBQ sauce</p>
+                        <span class="product-price">$16.99</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🍖</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(7, 'BBQ Ribs', 16.99)">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="8">
+                    <div class="product-info">
+                        <h3 class="product-name">Grilled Chicken</h3>
+                        <p class="product-description">Marinated chicken breast with herbs and spices</p>
+                        <span class="product-price">$14.50</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🍗</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(8, 'Grilled Chicken', 14.50)">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="9">
+                    <div class="product-info">
+                        <h3 class="product-name">Smoked Brisket</h3>
+                        <p class="product-description">Slow-smoked beef brisket with BBQ sauce</p>
+                        <span class="product-price">$18.75</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🥩</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(9, 'Smoked Brisket', 18.75)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tea Section -->
+        <section id="tea" class="category-section">
+            <div class="category-header">
+                <h2>Tea</h2>
+                <div class="category-description">Refreshing beverages to complement your meal</div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-product-id="10">
+                    <div class="product-info">
+                        <h3 class="product-name">Earl Grey Tea</h3>
+                        <p class="product-description">Classic black tea with bergamot essence</p>
+                        <span class="product-price">$3.50</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🍵</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(10, 'Earl Grey Tea', 3.50)">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="11">
+                    <div class="product-info">
+                        <h3 class="product-name">Green Tea</h3>
+                        <p class="product-description">Fresh green tea with antioxidants</p>
+                        <span class="product-price">$3.25</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🍃</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(11, 'Green Tea', 3.25)">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="12">
+                    <div class="product-info">
+                        <h3 class="product-name">Iced Tea</h3>
+                        <p class="product-description">Refreshing iced tea with lemon</p>
+                        <span class="product-price">$2.99</span>
+                    </div>
+                    <div class="product-image">
+                        <div class="image-placeholder">🧊</div>
+                    </div>
+                    <button class="add-btn" onclick="addToCart(12, 'Iced Tea', 2.99)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Page (initially hidden) -->
+    <div id="cartPage" class="cart-page hidden">
+        <div class="cart-header">
+            <button class="back-btn" onclick="showMenu()">
+                <i class="fas fa-arrow-left"></i> Back to Menu
+            </button>
+            <h2>Your Cart</h2>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be populated by JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
