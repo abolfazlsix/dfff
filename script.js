@@ -52,6 +52,54 @@ function initMenuPage() {
       addToCart({ id, name, price });
     });
   });
+
+  // Demon writer animation on section enter
+  const sections = document.querySelectorAll('.menu-section');
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+          entry.target.classList.add('animated');
+          animateSection(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.25,
+    }
+  );
+
+  sections.forEach((sec) => observer.observe(sec));
+
+  function animateSection(section) {
+    const title = section.querySelector('.section-title');
+    if (!title) return;
+
+    // Create demon element (emoji)
+    const demon = document.createElement('span');
+    demon.className = 'demon';
+    demon.innerHTML = '&#128127;'; // 😈 emoji
+    title.appendChild(demon);
+
+    // Reveal title after short delay as if demon wrote it
+    setTimeout(() => {
+      title.classList.add('written');
+    }, 400);
+
+    // Stagger product card appearance
+    const cards = section.querySelectorAll('.product-card');
+    cards.forEach((card, idx) => {
+      card.style.transitionDelay = `${0.6 + idx * 0.15}s`;
+    });
+
+    // Add show class to trigger product card transitions
+    section.classList.add('show');
+
+    // Clean up demon element after animation completes
+    demon.addEventListener('animationend', () => demon.remove());
+  }
 }
 
 function initCartPage() {
