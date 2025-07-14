@@ -1,0 +1,169 @@
+.checkout-page {
+  min-height: 100vh;
+  background-color: var(--light-gray);
+  padding: 2rem 0;
+}
+
+.checkout-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  background: none;
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+.checkout-header h1 {
+  color: var(--dark-gray);
+  font-size: 2rem;
+}
+
+.checkout-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.checkout-form {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.checkout-form h2 {
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--secondary-gray);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+}
+
+.place-order-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.order-summary {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  height: fit-content;
+}
+
+.order-summary h2 {
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.order-items {
+  margin-bottom: 1.5rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.item-info h4 {
+  color: var(--dark-gray);
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.item-info p {
+  color: var(--primary-gray);
+  font-size: 0.9rem;
+}
+
+.item-price {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.order-total {
+  border-top: 2px solid var(--primary-blue);
+  padding-top: 1rem;
+  text-align: right;
+  font-size: 1.2rem;
+  color: var(--dark-gray);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .checkout-page {
+    padding: 1rem 0;
+  }
+  
+  .checkout-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .checkout-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .checkout-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .checkout-form,
+  .order-summary {
+    padding: 1.5rem;
+  }
+  
+  .checkout-form h2,
+  .order-summary h2 {
+    font-size: 1.25rem;
+  }
+}
